@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { projects } from '../../data/projects';
 import { techLogos, getAllUniqueTechnologies } from '../../data/techLogos';
 
@@ -11,7 +12,7 @@ const Footer: React.FC = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3 className="footer-title connect">Let's Connect</h3>
+          <h3 className="footer-title connect">Let&apos;s Connect</h3>
           <div className="social-links">
             <a href="#" className="social-link">GitHub</a>
             <a href="#" className="social-link">LinkedIn</a>
@@ -26,9 +27,11 @@ const Footer: React.FC = () => {
             {allTechnologies.map(tech => (
               techLogos[tech] ? (
                 <div key={tech} className="tech-logo">
-                  <img 
+                  <Image 
                     src={techLogos[tech]} 
-                    alt={`${tech} logo`} 
+                    alt={`${tech} logo`}
+                    height={40}
+                    width={40}
                     className="tech-logo-image" 
                   />
                   <span className="tech-logo-text">{tech}</span>

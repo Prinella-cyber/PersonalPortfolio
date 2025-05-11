@@ -6,7 +6,7 @@ const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="skills">
       <h2 className="section-title">Skills in Progress</h2>
-      <p className="section-subtitle">Technologies I'm currently learning</p>
+      <p className="section-subtitle">Technologies I&apos;m currently learning</p>
       
       <div className="skills-grid">
         {skills.map(skill => (

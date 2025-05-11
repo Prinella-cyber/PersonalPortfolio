@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTour, tourSteps } from '../../hooks/useTour';
+import { tourSteps } from '../../hooks/useTour';
 
 type TourGuideProps = {
   showTour: boolean;
