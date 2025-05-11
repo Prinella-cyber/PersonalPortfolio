@@ -14,10 +14,9 @@ const Footer: React.FC = () => {
         <div className="footer-section">
           <h3 className="footer-title connect">Let&apos;s Connect</h3>
           <div className="social-links">
-            <a href="#" className="social-link">GitHub</a>
-            <a href="#" className="social-link">LinkedIn</a>
-            <a href="#" className="social-link">Twitter</a>
-            <a href="#" className="social-link">Email</a>
+            <a href="https://github.com/Prinella-cyber" className="social-link">GitHub</a>
+            <a href="https://www.linkedin.com/in/prisca-onyebuchi-725948226/" className="social-link">LinkedIn</a>
+            <a href="mailto:youremail@example.com?subject=Hello&body=I'd like to get in touch!" className="social-link">Email</a>
           </div>
         </div>
         
