@@ -20,4 +20,12 @@
     --transition-slow: 0.5s ease;
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-code: 'Fira Code', monospace;
+    --spacing-mobile-sm: 0.5rem;
+    --spacing-mobile-md: 1rem;
+    --spacing-mobile-lg: 1.5rem;
+    --font-size-mobile-sm: 0.875rem;
+    --font-size-mobile-md: 1rem;
+    --font-size-mobile-lg: 1.25rem;
+    --font-size-mobile-xl: 1.5rem;
+    --font-size-mobile-2xl: 2rem;
 }

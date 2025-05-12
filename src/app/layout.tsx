@@ -8,6 +8,14 @@ const inter = Inter({
   display: 'swap',
 });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  minimumScale: 1,
+  viewportFit: 'cover',
+};
+
 export const metadata = {
   title: 'DevPortfolio - Web Developer Portfolio',
   description: 'A modern portfolio site showcasing my projects, skills, and journey as a web developer.',

@@ -1,4 +1,3 @@
-// src/components/home/Hero.tsx
 import React from 'react';
 import Link from 'next/link';
 import CodeWindow from './CodeWindow';
