@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const isDevelopment = process.env.NODE_ENV === 'development';
+  // const isDevelopment = process.env.NODE_ENV === 'development';
+  const isDevelopment = true;
   
   // Disable body scroll when menu is open
   useEffect(() => {
