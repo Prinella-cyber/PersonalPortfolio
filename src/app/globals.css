@@ -1337,3 +1337,40 @@ section {
     justify-content: center;
   }
 }
+
+/* ***************************************************************************************************************** */
+/* ***************************************************************************************************************** */
+/* Application is in development mode */
+.dev-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ff5f56;
+  color: white;
+  text-align: center;
+  padding: 4px 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  z-index: 1000;
+  animation: bounce-dev 2s infinite;
+}
+
+@keyframes bounce-dev {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Adjust header to accommodate the dev indicator */
+.header {
+  padding-top: calc(1.5rem + 40px) !important;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: calc(0.75rem + 40px) !important;
+  }
+}
+/* ***************************************************************************************************************** */
+/* ***************************************************************************************************************** */

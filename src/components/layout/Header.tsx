@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const isDevelopment = process.env.NODE_ENV === 'development';
   
   // Disable body scroll when menu is open
   useEffect(() => {
@@ -25,6 +26,10 @@ const Header: React.FC = () => {
   return (
     <>
       <header className="header">
+        {isDevelopment && (
+          <div className="dev-indicator">DEV - This website is still in development mode and therefore contains mostly Mock Data</div>
+        )}
+
         <div className="logo">
           <span className="logo-text">DevPortfolio</span>
         </div>
