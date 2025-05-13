@@ -1,0 +1,133 @@
+.tour-prompt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.tour-prompt-content {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  max-width: 500px;
+  text-align: center;
+  box-shadow: var(--shadow-strong);
+  animation: fadeIn 0.5s ease;
+}
+
+.tour-prompt h3 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.tour-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.tour-button {
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+}
+
+.tour-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.tour-box {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-strong);
+  max-width: 400px;
+  pointer-events: auto;
+  animation: slideUp 0.5s ease;
+}
+
+.tour-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.tour-navigation button {
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.tour-navigation button:hover {
+  background-color: var(--primary-light);
+}
+
+.tour-navigation button:disabled {
+  background-color: var(--dark-light);
+  cursor: not-allowed;
+}
+
+.tour-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.tour-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--light);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.tour-dot.active {
+  background-color: var(--primary);
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .tour-box {
+    width: 90%;
+    max-width: none;
+  }
+
+  .tour-prompt-content {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .tour-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .tour-button {
+    width: 100%;
+  }
+}

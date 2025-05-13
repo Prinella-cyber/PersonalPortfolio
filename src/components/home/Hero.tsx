@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import CodeWindow from './CodeWindow';
+import './hero.css';
 
 const Hero: React.FC = () => {
   return (

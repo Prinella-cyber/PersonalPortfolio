@@ -1,4 +1,5 @@
 import React from 'react';
+import './code-window.css';
 
 const CodeWindow: React.FC = () => {
   return (

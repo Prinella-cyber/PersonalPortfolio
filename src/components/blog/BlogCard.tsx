@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { BlogPost } from '../../types';
 import { formatDate } from '../../utils/helpers';
+import './blog.css';
 
 type BlogCardProps = {
   post: BlogPost;

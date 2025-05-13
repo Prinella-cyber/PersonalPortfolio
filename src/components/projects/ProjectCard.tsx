@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Project } from '../../types';
+import './projects.css';
 
 type ProjectCardProps = {
   project: Project;

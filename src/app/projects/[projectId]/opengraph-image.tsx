@@ -11,8 +11,9 @@ export const size = {
 export const contentType = 'image/png';
 
 // This function generates the image
-export default async function og({ params }: { params: { id: string } }) {
-  const project = projects.find(p => p.id.toString() === params.id);
+export default async function og({ params }: { params: { projectId: string } }) {
+  const projectId = params.projectId;
+  const project = projects.find(p => p.id.toString() === projectId);
   const title = project ? project.title : 'Project';
   
   return new ImageResponse(

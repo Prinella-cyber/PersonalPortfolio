@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import { projects } from '../../../data/projects';
-import ProjectDetails from '../../projects/ProjectDetails';
+import ProjectDetails from '../ProjectDetails';
 import { notFound } from 'next/navigation';
+import './project.css';
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const project = projects.find((p) => p.id.toString() === params.id);
+export async function generateMetadata({ params }: { params: { projectId: string } }): Promise<Metadata> {
+  const projectId = params.projectId;
+  const project = projects.find((p) => p.id.toString() === projectId);
   
   if (!project) {
     return {
@@ -29,8 +31,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = projects.find((p) => p.id.toString() === params.id);
+export default function ProjectPage({ params }: { params: { projectId: string } }) {
+  const projectId = params.projectId;
+  const project = projects.find((p) => p.id.toString() === projectId);
   
   if (!project) {
     notFound();

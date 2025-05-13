@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { projects } from '../../data/projects';
 import { techLogos, getAllUniqueTechnologies } from '../../data/techLogos';
+import './footer.css';
 
 const Footer: React.FC = () => {
   const allTechnologies = getAllUniqueTechnologies(

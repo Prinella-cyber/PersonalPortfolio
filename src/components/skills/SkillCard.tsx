@@ -1,6 +1,7 @@
 import React from 'react';
 import { Skill } from '../../types';
 import { getProgressWidth } from '../../utils/helpers';
+import './skills.css';
 
 type SkillCardProps = {
   skill: Skill;

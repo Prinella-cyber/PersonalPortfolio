@@ -1,5 +1,6 @@
 import React from 'react';
 import { CertificationStep as StepType } from '../../types';
+import './certification.css';
 
 type CertificationStepProps = {
   step: StepType;
