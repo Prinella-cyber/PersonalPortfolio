@@ -35,7 +35,9 @@ const Header: React.FC = () => {
         )}
 
         <div className="logo">
-          <span className="logo-text">DevPortfolio</span>
+          <Link href="/">
+            <span className="logo-text">DevPortfolio</span>
+          </Link>
         </div>
         
         <button 

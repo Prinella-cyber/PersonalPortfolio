@@ -10,6 +10,8 @@ export type Project = {
     video: ProjectVideo;
     technologies: string[];
     image: string;
+    liveUrl?: string;
+    githubUrl?: string;
 };
 
 export type CertificationStep = {

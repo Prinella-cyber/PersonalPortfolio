@@ -10,7 +10,9 @@ export const projects: Project[] = [
       long: "https://example.com/videos/sentiment-long.mp4"
     },
     technologies: ["Python", "PyTorch", "Flask", "NLP", "React"],
-    image: "/projects/neural-network.jpg"
+    image: "/projects/neural-network.jpg",
+    liveUrl: "",
+    githubUrl: ""
   },
   {
     id: 2,
@@ -21,7 +23,9 @@ export const projects: Project[] = [
       long: "https://example.com/videos/blockchain-long.mp4"
     },
     technologies: ["Solidity", "Ethereum", "Web3.js", "React", "Node.js"],
-    image: "/projects/blockchain.jpg"
+    image: "/projects/blockchain.jpg",
+    liveUrl: "",
+    githubUrl: ""
   },
   {
     id: 3,
@@ -32,7 +36,9 @@ export const projects: Project[] = [
       long: "https://example.com/videos/ar-long.mp4"
     },
     technologies: ["Unity", "ARKit", "C#", "3D Modeling", "UX Design"],
-    image: "/projects/ar-education.jpg"
+    image: "/projects/ar-education.jpg",
+    liveUrl: "",
+    githubUrl: ""
   },
   {
     id: 4,
@@ -43,7 +49,9 @@ export const projects: Project[] = [
       long: "https://example.com/videos/distributed-long.mp4"
     },
     technologies: ["Go", "D3.js", "WebSockets", "Docker", "Kubernetes"],
-    image: "/projects/distributed-systems.jpg"
+    image: "/projects/distributed-systems.jpg",
+    liveUrl: "",
+    githubUrl: ""
   },
   {
     id: 5,
@@ -54,6 +62,8 @@ export const projects: Project[] = [
       long: "https://example.com/videos/quantum-long.mp4"
     },
     technologies: ["Python", "Qiskit", "TypeScript", "Three.js", "WebGL"],
-    image: "/projects/quantum.jpg"
+    image: "/projects/quantum.jpg",
+    liveUrl: "",
+    githubUrl: ""
   }
 ];

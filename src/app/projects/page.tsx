@@ -1,17 +1,14 @@
-"use client"
-
-import React, { useState } from 'react';
+import React from 'react';
 import { projects } from '../../data/projects';
 import ProjectCard from '../../components/projects/ProjectCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Projects | Prisca Onyebuchi',
+  description: 'Explore my portfolio of web development and software projects',
+};
 
 export default function ProjectsPage() {
-  const [activeProject, setActiveProject] = useState<number | null>(null);
-  const [videoType, setVideoType] = useState<'short' | 'long'>('short');
-
-  const toggleProject = (projectId: number) => {
-    setActiveProject(projectId === activeProject ? null : projectId);
-  };
-
   return (
     <main>
       <section className="projects">
@@ -20,14 +17,7 @@ export default function ProjectsPage() {
         
         <div className="projects-grid">
           {projects.map(project => (
-            <ProjectCard 
-              key={project.id}
-              project={project}
-              isActive={activeProject === project.id}
-              videoType={videoType}
-              onToggle={() => toggleProject(project.id)}
-              onVideoTypeChange={setVideoType}
-            />
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </section>
