@@ -14,8 +14,8 @@ const Hero: React.FC = () => {
           Full-stack developer specializing in interactive applications and secure systems
         </p>
         <div className="hero-cta">
-          <Link href="#projects" className="button primary">View Projects</Link>
-          <Link href="#contact" className="button secondary">Contact Me</Link>
+          <Link href="/projects" className="button primary">View Projects</Link>
+          <Link href="/contact" className="button secondary">Contact Me</Link>
         </div>
       </div>
       <div className="hero-image">

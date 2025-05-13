@@ -1,8 +1,9 @@
+"use client"
 import React, { useState } from 'react';
-import ProjectCard from './ProjectCard';
 import { projects } from '../../data/projects';
+import ProjectCard from '../../components/projects/ProjectCard';
 
-const ProjectsSection: React.FC = () => {
+export default function ProjectsPage() {
   const [activeProject, setActiveProject] = useState<number | null>(null);
   const [videoType, setVideoType] = useState<'short' | 'long'>('short');
 
@@ -11,7 +12,8 @@ const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="projects">
+    <main>
+      <section id="projects" className="projects">
       <h2 className="section-title">Projects</h2>
       <p className="section-subtitle">Explore my recent work</p>
       
@@ -28,7 +30,6 @@ const ProjectsSection: React.FC = () => {
         ))}
       </div>
     </section>
+    </main>
   );
-};
-
-export default ProjectsSection;
+}

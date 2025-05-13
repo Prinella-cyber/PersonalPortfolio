@@ -1,6 +1,7 @@
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 import { Inter } from 'next/font/google';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,9 +35,11 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+        <div className="portfolio">
+          <Header />
           {children}
-        </ThemeProvider>
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -1,10 +1,13 @@
+"use client"
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const isDevelopment = process.env.NODE_ENV === 'development';
+  const pathname = usePathname();
   const isDevelopment = true;
+  // const isDevelopment = process.env.NODE_ENV === 'development';
   
   // Disable body scroll when menu is open
   useEffect(() => {
@@ -46,11 +49,60 @@ const Header: React.FC = () => {
         
         <nav className={`navigation ${menuOpen ? 'open' : ''}`}>
           <ul>
-            <li><Link href="#hero" onClick={() => setMenuOpen(false)}>Home</Link></li>
-            <li><Link href="#projects" onClick={() => setMenuOpen(false)}>Projects</Link></li>
-            <li><Link href="#skills" onClick={() => setMenuOpen(false)}>Skills</Link></li>
-            <li><Link href="#certification" onClick={() => setMenuOpen(false)}>Certification</Link></li>
-            <li><Link href="#blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
+            <li>
+              <Link 
+                href="/" 
+                className={pathname === '/' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/projects" 
+                className={pathname === '/projects' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/skills" 
+                className={pathname === '/skills' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Skills
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/certification" 
+                className={pathname === '/certification' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Certification
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/blog" 
+                className={pathname === '/blog' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link 
+                href="/contact" 
+                className={pathname === '/contact' ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>
