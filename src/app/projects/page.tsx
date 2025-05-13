@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from 'react';
 import { projects } from '../../data/projects';
 import ProjectCard from '../../components/projects/ProjectCard';
@@ -13,23 +14,23 @@ export default function ProjectsPage() {
 
   return (
     <main>
-      <section id="projects" className="projects">
-      <h2 className="section-title">Projects</h2>
-      <p className="section-subtitle">Explore my recent work</p>
-      
-      <div className="projects-grid">
-        {projects.map(project => (
-          <ProjectCard 
-            key={project.id}
-            project={project}
-            isActive={activeProject === project.id}
-            videoType={videoType}
-            onToggle={() => toggleProject(project.id)}
-            onVideoTypeChange={setVideoType}
-          />
-        ))}
-      </div>
-    </section>
+      <section className="projects">
+        <h1 className="section-title">Projects</h1>
+        <p className="section-subtitle">Explore my recent work</p>
+        
+        <div className="projects-grid">
+          {projects.map(project => (
+            <ProjectCard 
+              key={project.id}
+              project={project}
+              isActive={activeProject === project.id}
+              videoType={videoType}
+              onToggle={() => toggleProject(project.id)}
+              onVideoTypeChange={setVideoType}
+            />
+          ))}
+        </div>
+      </section>
     </main>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Project } from '../../types';
 
 type ProjectCardProps = {
@@ -63,6 +64,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 ))}
               </div>
             </div>
+            <Link 
+              href={`/projects/${project.id}`} 
+              className="button primary view-details"
+              onClick={(e) => e.stopPropagation()}
+            >
+              View Full Details
+            </Link>
           </div>
         )}
       </div>
