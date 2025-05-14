@@ -63,21 +63,21 @@ const Header: React.FC = () => {
               </Link>
             </li>
             <li>
+            <Link 
+                href="/experience" 
+                className={pathname.startsWith('/experience') ? 'active' : ''}
+                onClick={() => setMenuOpen(false)}
+              >
+                Experience
+              </Link>
+            </li>
+            <li>
               <Link 
                 href="/projects" 
                 className={pathname === '/projects' ? 'active' : ''}
                 onClick={() => setMenuOpen(false)}
               >
                 Projects
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/skills" 
-                className={pathname === '/skills' ? 'active' : ''}
-                onClick={() => setMenuOpen(false)}
-              >
-                Skills
               </Link>
             </li>
             <li>

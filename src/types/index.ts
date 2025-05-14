@@ -38,11 +38,15 @@ export type Skill = {
 };
 
 export type BlogPost = {
-    id: number;
+    id: string;
     title: string;
     excerpt: string;
+    content: string;
     date: string;
-    image: string;
+    image?: string;
+    relatedExperienceId?: number;
+    tags: string[];
+    readTime: string;
 };
 
 export type TourStep = {
@@ -50,4 +54,29 @@ export type TourStep = {
     title: string;
     description: string;
     targetId: string;
+};
+
+export type WorkExperience = {
+    id: number;
+    company: string;
+    role: string;
+    period: string;
+    location: string;
+    description: string;
+    responsibilities: string[];
+    achievements: string[];
+    skills: string[];
+    logo: string;
+    videoUrl: string;
+    blogPostId?: string;
+    testimonial?: {
+      text: string;
+      author: string;
+      position: string;
+    };
+    images?: string[];
+    links?: {
+      title: string;
+      url: string;
+    }[];
 };

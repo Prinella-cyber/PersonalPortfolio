@@ -1,0 +1,397 @@
+.experience-timeline-full {
+  position: relative;
+  max-width: 1200px;
+  margin: 3rem auto 5rem;
+}
+
+.experience-timeline-full::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--light);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-content {
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+}
+
+/* Create the circles on the timeline */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: 30px;
+  background-color: var(--primary);
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.right::after {
+  left: -10px;
+}
+
+/* Add the arrows pointing to the timeline */
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 28px;
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--white);
+}
+
+.timeline-item.right .timeline-content::before {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--white) transparent transparent;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.timeline-logo-container {
+  width: 60px;
+  height: 60px;
+  background-color: var(--light);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.timeline-logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.timeline-date {
+  color: var(--dark-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.timeline-role {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-location {
+  font-size: 0.9rem;
+  color: var(--dark-light);
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.timeline-highlights {
+  margin-bottom: 1rem;
+}
+
+.highlights-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.highlights-list {
+  padding-left: 1.5rem;
+}
+
+.highlights-list li {
+  margin-bottom: 0.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.timeline-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-skill-tag {
+  padding: 4px 10px;
+  background-color: var(--light);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--dark);
+}
+
+.timeline-skill-more {
+  font-size: 0.8rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.timeline-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-view-button {
+  padding: 8px 16px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.timeline-view-button:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.timeline-blog-link {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.arrow-icon {
+  margin-left: 0.5rem;
+  transition: transform var(--transition-fast);
+}
+
+.timeline-blog-link:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .experience-timeline-full::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 20px;
+    left: 0;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::after {
+    left: 21px;
+    right: auto;
+  }
+
+  .timeline-item.right::after {
+    left: 21px;
+  }
+
+  .timeline-content::before {
+    left: -10px;
+    right: auto;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--white) transparent transparent;
+  }
+
+  .timeline-item.right .timeline-content::before {
+    left: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .timeline-view-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-timeline-full::after {
+    left: 21px;
+  }
+
+  .timeline-item {
+    padding-left: 50px;
+    padding-right: 10px;
+  }
+
+  .timeline-item::after {
+    left: 11px;
+  }
+
+  .timeline-content {
+    padding: 1.25rem;
+  }
+}
+
+/* Additional styles for the experience page */
+.experience-page {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-overview {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.overview-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.overview-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+
+.skills-overview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skill-tag.highlight {
+  background-color: var(--light);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--dark);
+  transition: all var(--transition-fast);
+}
+
+.skill-tag.highlight:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+}
+
+.experience-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-normal);
+  min-width: 150px;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--dark-light);
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .experience-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
