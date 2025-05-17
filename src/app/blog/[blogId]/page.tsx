@@ -5,7 +5,7 @@ import { experiences } from '../../../data/experiences';
 import BlogPostDetail from '../../../components/blog/BlogPostDetail';
 
 export async function generateMetadata({ params }: { params: { blogId: string } }): Promise<Metadata> {
-  const { blogId } = await params;
+  const { blogId } = params;
   const post = blogPosts.find(post => post.id === blogId);
   
   if (!post) {
@@ -28,7 +28,7 @@ export function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: { params: { blogId: string } }) {
-  const { blogId } = await params;
+  const { blogId } = params;
   const post = blogPosts.find(post => post.id === blogId);
   
   if (!post) {
