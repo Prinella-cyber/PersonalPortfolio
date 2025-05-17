@@ -17,7 +17,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
     <div className={`experience-card ${isExpanded ? 'expanded' : ''}`}>
       <div className="experience-header" onClick={() => setIsExpanded(!isExpanded)}>
         <div className="experience-logo-container">
-          {/* Use a placeholder if no logo available */}
           <div className="experience-logo-placeholder">
             {experience.logo ? (
               <Image 
@@ -94,7 +93,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
               
               {experience.testimonial && (
                 <div className="experience-testimonial">
-                  <div className="quote-mark">"</div>
+                  <div className="quote-mark">&quot;</div>
                   <p className="testimonial-text">{experience.testimonial.text}</p>
                   <div className="testimonial-author">
                     <p className="author-name">— {experience.testimonial.author}</p>

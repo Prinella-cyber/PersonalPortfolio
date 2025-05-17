@@ -107,7 +107,7 @@ const ExperienceDetail: React.FC<ExperienceDetailProps> = ({ experience }) => {
               <div className="experience-detail-card testimonial-card">
                 <h3 className="card-heading">Testimonial</h3>
                 <div className="experience-testimonial">
-                  <div className="quote-mark">"</div>
+                  <div className="quote-mark">&quot;</div>
                   <p className="testimonial-text">{experience.testimonial.text}</p>
                   <div className="testimonial-author">
                     <p className="author-name">— {experience.testimonial.author}</p>
@@ -120,7 +120,7 @@ const ExperienceDetail: React.FC<ExperienceDetailProps> = ({ experience }) => {
             {experience.blogPostId && (
               <div className="experience-detail-card">
                 <h3 className="card-heading">Read More</h3>
-                <p className="blog-preview">I've written about my experiences and lessons learned during my time at {experience.company}.</p>
+                <p className="blog-preview">I&apos;ve written about my experiences and lessons learned during my time at {experience.company}.</p>
                 <Link href={`/blog/${experience.blogPostId}`} className="read-blog-button">
                   Read My Blog Post
                 </Link>

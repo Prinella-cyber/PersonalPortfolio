@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
 import { experiences } from '../../../data/experiences';
 import ExperienceDetail from '../../../components/experience/ExperienceDetail';
 
